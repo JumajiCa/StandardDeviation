@@ -2,6 +2,8 @@
 #include "core.h" 
 #include <iostream> 
 
+// TODO. - Make A Standard F32 Type For Easy Use. 
+
 int main(){ 
 
     core core;     
@@ -10,9 +12,11 @@ int main(){
     // TODO. - Add CTags And Tagbar Support To This Project. 
     // core.initLoop(); 
 
-    std::cout << "Test. " << std::endl; 
-    SD.getMean(); 
+    SD.getMean(SD.Mean); 
+
+    std::cout << SD.Mean << std::endl; 
 
     return 0; 
 
 } 
+
