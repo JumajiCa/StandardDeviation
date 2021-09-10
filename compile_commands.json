@@ -1,0 +1,14 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-o",
+      "src/core.o",
+      "src/core.cpp"
+    ],
+    "directory": "/home/jumajica/SD.",
+    "file": "/home/jumajica/SD./src/core.cpp",
+    "output": "/home/jumajica/SD./src/core.o"
+  }
+]
