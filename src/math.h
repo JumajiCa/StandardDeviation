@@ -6,20 +6,18 @@
 #ifndef JU_MATH 
 #define JU_MATH 
 
-int32_t scratchAdd(int Number1, int Summand); 
-
 // NOTE. - So Far, This Isn't Broken. 
-// TODO. - Come Up With A Better Struct Name. 
-
 struct standardD{ 
 
-    private: 
-        // Defining All Private Member Variables That Will Be Used In The Struct.  
+    public: 
+        std::vector<float> sdVec = {1, 2, 3, 4, 5, 6}; 
         int Mean; 
         float varVariance; 
-        // vector<int> numVector; // Maybe I'll Store The Given Vector Of Numbers As A Private Member Too. 
 
-    public: 
+        // IMPORTANT! Call This Fucntion First. 
+        // This Function Is Going To Handle All Of The Inputs For The 'standardD' struct; Basically, It Is Going To Define All Of The Member Variables With User Inputs. 
+        void handleUserSD(); 
+        void getMean(); 
         float SD(std::vector<int> numVector, int Mean, float Variance); 
         float Variance(int Mean); 
 }; 

@@ -1,9 +1,10 @@
 
 #include <iostream> 
 #include <assert.h> 
+#include "math.h" 
 
-#ifndef JU_WIDNOW 
-#define JU_WIDNOW 
+#ifndef JU_CORE 
+#define JU_CORE 
 
 struct core{ 
 
@@ -25,10 +26,6 @@ struct core{
 
         // Handles All Of The Input For The Variables That Are Used In The Switch Statement In 'initLoop()'. 
         void handleSwitchIn(); 
-
-        // IMPORTANT! Call This Fucntion First. 
-        // This Function Is Going To Handle All Of The Inputs For The 'standardD' struct; Basically, It Is Going To Define All Of The Member Variables With User Inputs. 
-        void handleUserSD(); 
 }; 
 
 #endif 

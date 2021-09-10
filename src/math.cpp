@@ -4,16 +4,21 @@
 #include <cmath>
 #include <math.h> 
 
-int32_t scratchAdd(int Number1, int Summand){ 
-
-    int32_t Summation{0}; 
-
-    return Summation; 
-
+// NOTE. - Also, It Might Be Better To Store The Variance And The Mean As Private Or Protected Members. 
+void standardD::handleUserSD(){ 
+    standardD standardD; 
+    std::cout << "Enter The Vector Numbers. " << std::endl; 
 } 
 
-// TODO. - Find Out If Putting This Inside Of A Struct Would Be More Efficient. Sort Of Done. 
-// NOTE. - Also, It Might Be Better To Store The Variance And The Mean As Private Or Protected Members. 
+void standardD::getMean(){ 
+    standardD standardD; 
+    // TODO. - Get This Piece Of Sh*t To Work. 
+    // NOTE. - Out - Of - Bound Indexes Are Really F*cking Weird. Like, 8.50434e-41, Kind Of Weird 😔. 
+    float totalValuation{standardD.sdVec[6]}; 
+
+    std::cout << totalValuation << std::endl; 
+
+} 
 
 float standardD::Variance(int Mean){ 
     float Variance; 

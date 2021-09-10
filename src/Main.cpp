@@ -4,12 +4,15 @@
 
 int main(){ 
 
-    core Fun; 
+    core core;     
+    standardD SD; 
 
-    // TODO. - Setup CTags And Tabbar On This Project. 
-    Fun.initLoop(); 
+    // TODO. - Add CTags And Tagbar Support To This Project. 
+    // core.initLoop(); 
+
+    std::cout << "Test. " << std::endl; 
+    SD.getMean(); 
 
     return 0; 
 
 } 
-

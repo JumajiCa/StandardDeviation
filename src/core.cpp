@@ -3,7 +3,6 @@
 #include "math.h" 
 
 // TODO. - Maybe Add File Export Functionality. 
-
 // NOTE. - You Have To Create A Member Variable Even In A Definition For The Struct. 
 
 /* void core::T(){ 
@@ -52,7 +51,8 @@ void core::initLoop(){
     }
 } 
 
-void core::handleUserSD(){ 
-
+// TODO. - Finish Writting The Logic For This Function. 
+// TODO. - Add All Of The Variables That Are Going To Be Used For This Function F
+void core::handleSwitchIn(){ 
 } 
 
