@@ -31,10 +31,10 @@ main: $(OBJS)
 	@echo "Creating The Main Executable. " 
 	$(CC) -o $(BIN)/main $^ $(LDFLAGS) 
 
-run: all 
+run: clean all 
 	$(BIN)/main 
 
 clean: 
 	@echo "Cleaning Up Everything. " 
-	rm -rvf *.o ${BINS} 
+	rm -rvf src/*.o ${BINS} 
 

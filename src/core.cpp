@@ -16,8 +16,7 @@ void core::initLoop(){
 
     while (core.State == true){ 
         // TODO. - Handle Certain String Inputs As Certain Numberical Values. 
-        // NOTE. - These Are Temporary Variables. These Should be Stored In A More Organized Way. 
-        standardD Fun; 
+        standardD SD; 
         // The Variables That Are Supposed To Go Insde Of The 'SD' Function. 
         std::vector<int> Vec{1'000, 21, 23, 219, 2'819}; 
         int Number{25}; 
@@ -39,13 +38,15 @@ void core::initLoop(){
                 // std::cout << "Enter A Valid Input! " << std::endl; 
                 break; 
             case '1': 
-                std::cout << Fun.SD(Vec, Number, 10) << std::endl; 
+                SD.getMean(SD.Mean); 
+                std::cout << SD.Mean << std::endl; 
+                SD.resetMean(SD.Mean); 
                 break; 
             case '2': 
                 float In{0}; 
                 std::cout << "Numeric Input. " << std::endl; 
                 std::cin >> In; 
-                std::cout << Fun.SD(Vec, Number, In) << std::endl;  
+                std::cout << SD.SD(SD.sdVec, Number) << std::endl;  
                 break; 
         }
     }
