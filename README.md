@@ -5,8 +5,8 @@
 
 ## TODO.
 
-[ ] Handle User Input.
-[ ] Handle File Exports.
-[ ] Visualize In A Real - Time Graph.
-[ ] Have Graph Functionality.
+- [ ] Handle User Input.
+- [ ] Handle File Exports.
+- [ ] Visualize In A Real - Time Graph.
+- [ ] Have Graph Functionality.
 
