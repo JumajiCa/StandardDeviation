@@ -14,7 +14,7 @@ struct standardD{
     std::vector<float> sdVec = {10.0f, 20.0f, 30.0f, 40.0f, 50.0f, 60.0f}; 
     uint64_t sizeOfVec{sdVec.size()}; 
     // TODO. - Remember To Remove This Implicit And Hard - Coded Variable, Or To At Least Make The Value 0. 
-    float Mean{10.5}; 
+    float Mean{}; 
     float varVariance{0}; 
 
 
@@ -23,8 +23,8 @@ struct standardD{
     void handleUserSD(); 
     void getMean(float &Mean); 
     void resetMean(float &Mean); 
-    void getVariance(std::vector<float> &Vec, float &varVariance); 
-    float SD(std::vector<float> numVector, int Mean); 
+    void getVariance(std::vector<float> &Vec, float &Mean, float &varVariance); 
+    float SD(float &varVariance, float &Mean); 
 
 }; 
 

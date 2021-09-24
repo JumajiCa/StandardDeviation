@@ -12,13 +12,11 @@ void standardD::handleUserSD(){
 
 // NOTE. - I Was So Caught Up With The Fact That I Made This A Void Function For Some Reason That I Forgot That Return Statements Were A Possible Answer Too. 
 // NOTE. - This Might Lead To Some Future Errors, But I Can't Be Bothered To Fix It And Make It Into A Proper Float Function Right Now. 
-void standardD::getMean(float &Mean){ 
+void standardD::getMean(float &Mean){ // NOTE. - Currently Correct. 
     standardD standardD; 
     // NOTE. - Out - Of - Bound Indexes Are Really F*cking Weird. Like, 8.50434e-41, Kind Of Weird 😔. 
     for (size_t i{0}; i < standardD.sdVec.size(); i++){ 
-        std::cout << standardD.sdVec[i] << std::endl; // NOTE. - For Debugging Purposes Only. 
         Mean = {Mean + standardD.sdVec[i]}; 
-        std::cout << Mean << std::endl; 
     } 
     Mean = {Mean / standardD.sdVec.size()}; 
 } 
@@ -27,49 +25,48 @@ void standardD::resetMean(float &Mean){
     Mean = {0}; 
 } 
 
-void standardD::getVariance(std::vector<float> &Vec, float &varVariance){ 
-    standardD SD; 
+void standardD::getVariance(std::vector<float> &Vec, float &Mean, float &varVariance){ // NOTE. - This Currently Works. 
     float Temp{}; 
-
     // NOTE. - This Sh*t Isn't F*cking Working For Some Reason. 
     // NOTE. - Talk To Smarter Human to Know Why It Is Printing Out Twice. 
-
     for (size_t i{0}; i < Vec.size(); i++){ 
         // Initialize Temp With The Difference Between The Value In The Vector And The Mean. 
-        Temp = {Vec[i] - SD.Mean}; 
+        Temp = {Vec[i] - Mean}; 
 
-        // TODO. - Fix This Bug; For Some Reason, The Program Is Adding Way More Into varVariance Than It Should be. 
-        // NOTE. - For Some Reason, This Prints Out 0 And Then 1, Even Though It Is Only Called Once. 
-        std::cout << varVariance << std::endl; 
-
-        std::cout << Vec[i] << std::endl; 
+        /* std::cout << "----------------------------------------------------------------- " << std::endl; 
+        std::cout << "Vector Value. - " << Vec[i] << ". " << std::endl; 
+        std::cout << "----------------------------------------------------------------- " << std::endl; 
         // Prints The Mean. 
-        std::cout << SD.Mean << std::endl; 
+        // TODO. - Find Out Why The Hell This Isn't Printing Out The Right Value For SD.Mean. 
+        std::cout << "Mean. - " << Mean <<  ". " << std::endl; 
+        std::cout << "----------------------------------------------------------------- " << std::endl; 
         // This Should Print Out The Vector Index Minus The Mean. 
-        std::cout << Temp << std::endl; 
+        std::cout << "Temp. - " << Temp << ". " << std::endl; 
+        std::cout << "----------------------------------------------------------------- " << std::endl; */ // NOTE. - This Is Just Debug Functionality. 
 
         // Raise Temp To The Second Power. 
         Temp = {std::pow(Temp, 2.0f)}; 
 
-        varVariance = {varVariance + Temp}; 
+        // std::cout << "Temp After The Exponent. - " << Temp << ". " << std::endl; 
+        varVariance += Temp; 
 
         // Reset the Value Of Temp To Zero. 
-        Temp = {0}; 
-
-
-        std::cout << Temp << std::endl; 
+        Temp = {0}; // NOTE. - This Works As Intended, For Now, At Least. 
         // SD.varVariance = {(SD.varVariance - Vec[i])}; 
 
     } 
+    // NOTE. - Debug. 
+    // std::cout << varVariance << std::endl; 
 } 
 
 // NOTE. - I Might Make This Return A Float. 
-float standardD::SD(std::vector<float> numVector, int Mean){ 
+// NOTE. - These Parametres May Be Unnecessary With How I'm Going About Doing It. 
+float standardD::SD(float &varVariance, float &Mean){ 
     standardD SD; 
     getMean(SD.Mean); 
-    getVariance(SD.sdVec, SD.varVariance); 
+    getVariance(SD.sdVec, SD.Mean, SD.varVariance); 
+    std::cout << SD.varVariance << std::endl; 
     // NOTE. - Temporary. 
-    return std::sqrt(SD.varVariance); 
-    std::cout << std::sqrt(SD.varVariance) << std::endl; 
+    return sqrt(SD.varVariance); 
 } 
 

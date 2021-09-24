@@ -46,7 +46,7 @@ void core::initLoop(){
                 float In{0}; 
                 std::cout << "Numeric Input. " << std::endl; 
                 std::cin >> In; 
-                std::cout << SD.SD(SD.sdVec, Number) << std::endl;  
+                std::cout << SD.SD(SD.varVariance, SD.Mean) << std::endl; 
                 break; 
         }
     }

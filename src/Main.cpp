@@ -4,6 +4,8 @@
 
 // TODO. - This Is Very Important Now. 
 // TODO. - Very Important; Make A Standard F32 Type For Easy Use. 
+// TODO. - Finish Handeling The Functions For User Input. 
+// TODO. - Clean - Up The Code In The 'getVariance()' Function. 
 
 int main(){ 
 
@@ -11,8 +13,9 @@ int main(){
     standardD SD; 
 
     // core.initLoop(); 
-
-    SD.SD(SD.sdVec, SD.Mean); 
+    //
+    float standardDeviation = {SD.SD(SD.varVariance, SD.Mean)}; 
+    std::cout << standardDeviation << std::endl; 
 
     return 0; 
 
